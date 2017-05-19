@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-std::vector<std::string>  reversed_tokenizer(const std::string & inp, const std::string & delim)
+std::vector<std::string>  reverse_tokenizer(const std::string & inp, const std::string & delim)
 {
     std::vector<std::string>                rv;
     std::string::const_reverse_iterator     it_b, it_e;
@@ -50,26 +50,26 @@ int main()
 {
 
     {
-        auto rv = reversed_tokenizer ("fox   jumped     high, !!! another word", ", !");
+        auto rv = reverse_tokenizer ("fox   jumped     high, !!! another word", ", !");
         
         print_tokens (rv);
     }
 
     {
-        auto rv = reversed_tokenizer ("      ", ", !");
+        auto rv = reverse_tokenizer ("      ", ", !");
         
         print_tokens (rv);
     }
 
 
     {
-        auto rv = reversed_tokenizer ("singleword", ", !");
+        auto rv = reverse_tokenizer ("singleword", ", !");
         
         print_tokens (rv);
     }
 
     {
-        auto rv = reversed_tokenizer ("", ", !");
+        auto rv = reverse_tokenizer ("", ", !");
         
         print_tokens (rv);
     }
